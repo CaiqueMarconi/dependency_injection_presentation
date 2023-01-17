@@ -2,7 +2,7 @@
 
 # Oque é injeção de dependencia
 
-A injeção de dependência(DI) é um padrão de projeto cujo objetivo é manter um baixo acoplamento 
+```A injeção de dependência(DI) é um padrão de projeto cujo objetivo é manter um baixo acoplamento 
 entre diferentes módulos de um sistema. Assim ao realizar a injeção de dependência estamos fornecendo 
 aos objetos do nosso sistema outros objetos dos quais eles dependem com baixo acoplamento.
 
@@ -22,7 +22,7 @@ você pode transmitir diferentes implementações para verificar todos os difere
 
 # exemplo acoplado sem injeção de dependencia
 
-```class HttpService implements IHttpService {
+class HttpService implements IHttpService {
   @override
   Future<void> getHtpp() async {
     try {
@@ -36,7 +36,7 @@ você pode transmitir diferentes implementações para verificar todos os difere
       }
     }
   }
-}```
+}
 
 // dessa forma além do codigo ficar muito acoplado, tambem não conseguimos testar o nosso metodo,
 // pois eu n consigo passar meu dio pra dentro do metodo no test.
@@ -131,3 +131,4 @@ e injetamos suas dependencias, agora aonde quisermos recuperar o nosso HomeContr
 passamos apenas o seguinte Provider.of<HomeController>(context) e tambem podemos atribuir
 isto a uma variavel e utilizar todos os metodos e variaveis da nossa classe HomeController,
 como foi feito no arquivo 'HomePageInjectionWithPackage'.
+```
