@@ -22,7 +22,8 @@ você pode transmitir diferentes implementações para verificar todos os difere
 
 # exemplo acoplado sem injeção de dependencia
 
-`class HttpService implements IHttpService {
+'''
+class HttpService implements IHttpService {
   @override
   Future<void> getHtpp() async {
     try {
@@ -36,7 +37,8 @@ você pode transmitir diferentes implementações para verificar todos os difere
       }
     }
   }
-}`
+}
+'''
 
 // dessa forma além do codigo ficar muito acoplado, tambem não conseguimos testar o nosso metodo,
 // pois eu n consigo passar meu dio pra dentro do metodo no test.
