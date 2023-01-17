@@ -22,21 +22,21 @@ você pode transmitir diferentes implementações para verificar todos os difere
 
 # exemplo acoplado sem injeção de dependencia
 
-//class HttpService implements IHttpService {
-//  @override
-//  Future<void> getHtpp() async {
-//    try {
-//      var response = await Dio().get('http://www.google.com');
-//      if (kDebugMode) {
-//        print(response);
-//      }
-//    } catch (e) {
-//     if (kDebugMode) {
-//        print(e);
-//      }
-//    }
-//  }
-//}
+'class HttpService implements IHttpService {
+  @override
+  Future<void> getHtpp() async {
+    try {
+      var response = await Dio().get('http://www.google.com');
+      if (kDebugMode) {
+        print(response);
+      }
+    } catch (e) {
+      if (kDebugMode) {
+        print(e);
+      }
+    }
+  }
+}'
 
 // dessa forma além do codigo ficar muito acoplado, tambem não conseguimos testar o nosso metodo,
 // pois eu n consigo passar meu dio pra dentro do metodo no test.
